@@ -47,10 +47,8 @@ public class MainController {
 		System.out.println(td.getAdditionalFees());
 			
 				
-		Double taxAmount = td.setTaxAmount((td.getAdditionalFees()+td.getTransactionAmount())*(td.getTax()/100));
-		System.out.println(taxAmount);
-		
-		Double totalAmount = td.setTotalAmount(td.getAdditionalFees()+td.getTransactionAmount()+td.getTaxAmount());
+				
+		Double totalAmount = td.setTotalAmount(td.getAdditionalFees()+td.getTransactionAmount());
 		System.out.println(totalAmount);
 
 

@@ -65,9 +65,7 @@ public class TransactionData {
 	@Column(name="Status")
     private Boolean accountStatus;
 	
-	@Column(name= "Tax_Percentage")
-    private Double tax = 10.0;
-	
+		
 	@Column(name= "Tax_Amount")
     private Double taxAmount;
 	
@@ -77,14 +75,6 @@ public class TransactionData {
 
 	public Double setTaxAmount(Double taxAmount) {
 		return this.taxAmount = taxAmount;
-	}
-
-	public Double getTax() {
-		return tax;
-	}
-
-	public void setTax(Double tax) {
-		this.tax = tax;
 	}
 
 	
@@ -183,7 +173,7 @@ public class TransactionData {
 
     public TransactionData(long id, Double transactionAmount, Double fromAmount, Double toAmount, Double additionalFees,
 			Double totalAmount, Date transactionDate, String transactionMode, String fromCurrency, String toCurrency,
-			Boolean accountStatus, Double tax, Double taxAmount) {
+			Boolean accountStatus, Double taxAmount) {
 		super();
 		this.id = id;
 		this.transactionAmount = transactionAmount;
@@ -196,7 +186,6 @@ public class TransactionData {
 		this.fromCurrency = fromCurrency;
 		this.toCurrency = toCurrency;
 		this.accountStatus = accountStatus;
-		this.tax = tax;
 		this.taxAmount = taxAmount;
 	}
 
